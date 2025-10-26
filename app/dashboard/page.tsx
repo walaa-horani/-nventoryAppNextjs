@@ -3,6 +3,16 @@ import prisma from '@/lib/prisma'
 import { TrendingUp } from 'lucide-react'
 import React from 'react'
 import ArrivalChart from '../_components/ArrivalChart'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Inventory Management",
+  description: "View and manage all your products in one place. Add, update, and delete inventory items with ease.",
+  openGraph: {
+    title: "Inventory Management | Inventory App",
+    description: "View and manage all your products in one place.",
+  },
+};
 
 export default async function Page() {
 
@@ -200,7 +210,7 @@ console.log(totalValue)
 
              <div className='absolute inset-0 flex items-center justify-center'>
               <div className='text-center'>
-                <p className='text-2xl text-purple-500'>{highStockProduct} %</p>
+                <p className='text-2xl text-purple-500'>{stockPercentage} %</p>
                 <p>in Stock</p>
               </div>
               </div>  

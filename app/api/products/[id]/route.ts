@@ -3,9 +3,9 @@ import { NextResponse } from "next/server";
 
 export async function DELETE(
   _request: Request,
-  context: { params: Promise<{ id: string }> } // ✅ لاحظ Promise هنا
+  context: { params: Promise<{ id: string }> } // ✅  Promise 
 ) {
-  const { id } = await context.params; // ✅ لازم await
+  const { id } = await context.params; // ✅  await
   try {
     await prisma.product.delete({
       where: { id },
